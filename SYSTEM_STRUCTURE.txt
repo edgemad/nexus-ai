@@ -1,0 +1,326 @@
+===================================================================
+ NEXIE / NEXUSAI - SYSTEM STRUCTURE
+ Generated Sat Sep  5 08:54:50 PST 2026
+===================================================================
+
+## PART 1 - App project (/Volumes/1TBex/Nexus AI):
+
+.
+./NexusAI
+./NexusAI.xcodeproj
+./NexusAI.xcodeproj/project.pbxproj
+./NexusAI.xcodeproj/project.xcworkspace
+./NexusAI.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+./NexusAI.xcodeproj/project.xcworkspace/xcshareddata
+./NexusAI.xcodeproj/project.xcworkspace/xcshareddata/swiftpm
+./NexusAI.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration
+./NexusAI.xcodeproj/project.xcworkspace/xcuserdata
+./NexusAI.xcodeproj/project.xcworkspace/xcuserdata/edge.xcuserdatad
+./NexusAI.xcodeproj/project.xcworkspace/xcuserdata/edge.xcuserdatad/UserInterfaceState.xcuserstate
+./NexusAI.xcodeproj/xcuserdata
+./NexusAI.xcodeproj/xcuserdata/edge.xcuserdatad
+./NexusAI.xcodeproj/xcuserdata/edge.xcuserdatad/xcschemes
+./NexusAI.xcodeproj/xcuserdata/edge.xcuserdatad/xcschemes/xcschememanagement.plist
+./NexusAI/Assets.xcassets
+./NexusAI/Assets.xcassets/AccentColor.colorset
+./NexusAI/Assets.xcassets/AccentColor.colorset/Contents.json
+./NexusAI/Assets.xcassets/AppIcon.appiconset
+./NexusAI/Assets.xcassets/AppIcon.appiconset/Contents.json
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_128x128.png
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_128x128@2x.png
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_16x16.png
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_16x16@2x.png
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_256x256.png
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_256x256@2x.png
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_32x32.png
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_32x32@2x.png
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_512x512.png
+./NexusAI/Assets.xcassets/AppIcon.appiconset/icon_512x512@2x.png
+./NexusAI/Assets.xcassets/Contents.json
+./NexusAI/ContentView.swift
+./NexusAI/Models
+./NexusAI/Models/ActivityStore.swift
+./NexusAI/Models/AgentAction.swift
+./NexusAI/Models/ApprovalStore.swift
+./NexusAI/Models/AutomationStore.swift
+./NexusAI/Models/Bot.swift
+./NexusAI/Models/ChatSession.swift
+./NexusAI/Models/PromptPreset.swift
+./NexusAI/Models/SystemMonitor.swift
+./NexusAI/Models/UpgradeProposal.swift
+./NexusAI/NexusAI.entitlements
+./NexusAI/NexusAIApp.swift
+./NexusAI/NexusAIAppDelegate.swift
+./NexusAI/Services
+./NexusAI/Services/AgentExecutor.swift
+./NexusAI/Services/AssistantSettings.swift
+./NexusAI/Services/AudioMixer.swift
+./NexusAI/Services/AudioStudioGenerator.swift
+./NexusAI/Services/BackendManager.swift
+./NexusAI/Services/BotStore.swift
+./NexusAI/Services/BrainServiceClient.swift
+./NexusAI/Services/ChatEngine.swift
+./NexusAI/Services/ChatStore.swift
+./NexusAI/Services/CloudProviderService.swift
+./NexusAI/Services/CloudTTSEngine.swift
+./NexusAI/Services/DownloadSession.swift
+./NexusAI/Services/ImageGenerator.swift
+./NexusAI/Services/KnowledgeStore.swift
+./NexusAI/Services/LLMService.swift
+./NexusAI/Services/LocationService.swift
+./NexusAI/Services/MediaPlayer.swift
+./NexusAI/Services/MemoryServiceClient.swift
+./NexusAI/Services/MiniMaxService.swift
+./NexusAI/Services/ModelCatalogService.swift
+./NexusAI/Services/ModelStore.swift
+./NexusAI/Services/PresetStore.swift
+./NexusAI/Services/ProfileStore.swift
+./NexusAI/Services/ResearchServiceClient.swift
+./NexusAI/Services/SelfImprovementService.swift
+./NexusAI/Services/SpeechEngine.swift
+./NexusAI/Services/TempMediaCache.swift
+./NexusAI/Services/ThemeManager.swift
+./NexusAI/Services/VideoGenerator.swift
+./NexusAI/Services/VoiceConversationController.swift
+./NexusAI/Services/WebSearch.swift
+./NexusAI/Services/WorkspaceManager.swift
+./NexusAI/Views
+./NexusAI/Views/ActivityView.swift
+./NexusAI/Views/ApprovalsView.swift
+./NexusAI/Views/AudioView.swift
+./NexusAI/Views/AutomationsView.swift
+./NexusAI/Views/BotsView.swift
+./NexusAI/Views/ChatView.swift
+./NexusAI/Views/ChatWindowView.swift
+./NexusAI/Views/CodeView.swift
+./NexusAI/Views/FilesView.swift
+./NexusAI/Views/FloatingChatView.swift
+./NexusAI/Views/HealthView.swift
+./NexusAI/Views/ImageStudioView.swift
+./NexusAI/Views/KnowledgeView.swift
+./NexusAI/Views/ModelsView.swift
+./NexusAI/Views/SessionListView.swift
+./NexusAI/Views/SettingsView.swift
+./NexusAI/Views/VideoStudioView.swift
+./NexusAI/Views/WorkspaceView.swift
+
+## PART 2 - Runtime workspace tree (~/NexusAI Workspace, node_modules collapsed):
+
+.
+./.DS_Store
+./Archives
+./Chats
+./Chats/0F578976-9728-4355-9FE6-E44DFAA188BD.chat.json
+./Models
+./Outputs
+./Outputs/.DS_Store
+./Outputs/2026-08-30 17.50.00
+./Outputs/2026-08-30 17.50.09
+./Outputs/2026-08-30 18.21.51
+./Outputs/2026-08-30 18.22.07
+./Outputs/2026-08-31 11.09.09
+./Outputs/2026-08-31 11.13.07
+./Outputs/2026-08-31 11.13.09
+./Outputs/2026-08-31 11.16.06
+./Outputs/2026-08-31 11.16.16
+./Outputs/2026-08-31 11.47.56
+./Outputs/2026-08-31 11.48.00
+./Outputs/2026-08-31 11.48.13
+./Outputs/2026-08-31 21.51.28
+./Outputs/2026-08-31 21.51.31
+./Outputs/2026-09-01 08.46.28
+./Outputs/2026-09-01 09.10.24
+./Outputs/2026-09-01 09.10.24/mix-gospel-1788225024.wav
+./Outputs/2026-09-01 09.14.49
+./Outputs/2026-09-01 09.14.49/tts-1788225289.aiff
+./Outputs/2026-09-01 09.15.21
+./Outputs/2026-09-01 09.15.21/.DS_Store
+./Outputs/2026-09-01 09.51.14
+./Outputs/2026-09-01 09.52.30
+./Outputs/2026-09-01 10.28.15
+./Outputs/2026-09-01 10.28.15/mix-gospel-1788229695.wav
+./Outputs/2026-09-01 10.28.43
+./Outputs/2026-09-01 10.28.43/.DS_Store
+./Outputs/2026-09-01 10.29.14
+./Outputs/2026-09-01 10.29.14/mix-soul-1788229754.wav
+./Outputs/2026-09-01 10.29.35
+./Outputs/2026-09-01 10.29.42
+./Outputs/2026-09-01 10.31.04
+./Outputs/2026-09-01 12.14.24
+./Outputs/2026-09-01 12.14.24/.DS_Store
+./Outputs/2026-09-01 12.16.41
+./Outputs/2026-09-01 12.16.41/keyframe-1788236201402.png
+./Outputs/2026-09-01 12.18.22
+./Outputs/2026-09-01 12.18.22/.DS_Store
+./Outputs/2026-09-01 12.19.21
+./Outputs/2026-09-01 12.19.21/.DS_Store
+./Outputs/2026-09-01 12.19.56
+./Outputs/2026-09-01 12.19.56/keyframe-1788236396162.png
+./Outputs/2026-09-01 12.23.06
+./Outputs/2026-09-01 12.23.06/keyframe-1788236586267.png
+./Outputs/2026-09-01 12.25.58
+./Outputs/2026-09-01 12.25.58/.DS_Store
+./Outputs/2026-09-01 12.26.22
+./Outputs/2026-09-01 12.26.22/keyframe-1788236782490.png
+./Outputs/2026-09-01 12.34.25
+./Outputs/2026-09-01 12.34.25/keyframe-1788237265968.png
+./Outputs/2026-09-01 12.37.43
+./Outputs/2026-09-01 12.37.43/keyframe-1788237463703.png
+./Outputs/2026-09-01 12.41.12
+./Outputs/2026-09-01 12.41.48
+./Outputs/2026-09-01 12.52.55
+./Outputs/2026-09-01 12.52.55/keyframe-1788238375812.png
+./Outputs/2026-09-01 12.54.33
+./Outputs/2026-09-01 12.54.33/keyframe-1788238473951.png
+./Outputs/2026-09-01 12.56.08
+./Outputs/2026-09-01 12.56.08/keyframe-1788238568763.png
+./Outputs/2026-09-01 12.57.41
+./Outputs/2026-09-01 12.57.41/keyframe-1788238661829.png
+./Outputs/2026-09-01 12.59.14
+./Outputs/2026-09-01 12.59.14/keyframe-1788238754209.png
+./Outputs/2026-09-01 13.00.47
+./Outputs/2026-09-01 13.00.47/keyframe-1788238847925.png
+./Outputs/2026-09-01 13.02.19
+./Outputs/2026-09-01 13.02.29
+./Outputs/2026-09-03 07.36.50
+./Outputs/2026-09-03 07.36.50/keyframe-1788392210912.png
+./Outputs/2026-09-03 07.40.19
+./Outputs/2026-09-03 07.40.19/keyframe-1788392419547.png
+./Outputs/2026-09-03 07.43.49
+./Outputs/2026-09-03 07.43.49/keyframe-1788392629622.png
+./Outputs/2026-09-03 07.47.26
+./Outputs/2026-09-03 07.47.26/keyframe-1788392846295.png
+./Outputs/2026-09-03 07.51.08
+./Outputs/2026-09-03 07.51.08/keyframe-1788393068625.png
+./Outputs/2026-09-03 07.54.37
+./Outputs/2026-09-03 07.54.37/keyframe-1788393277734.png
+./Outputs/2026-09-03 07.58.17
+./Outputs/2026-09-03 07.58.43
+./Outputs/2026-09-03 09.18.49
+./Outputs/2026-09-03 09.18.49/keyframe-1788398329430.png
+./Outputs/2026-09-03 09.18.55
+./Outputs/2026-09-03 09.18.55/gen-1788398335.png
+./Outputs/2026-09-03 09.19.51
+./Outputs/2026-09-03 09.19.51/recreate-1788398391.txt
+./Outputs/2026-09-03 09.19.54
+./Outputs/2026-09-03 09.22.11
+./Outputs/2026-09-03 09.22.11/keyframe-1788398531936.png
+./Outputs/2026-09-03 09.24.19
+./Outputs/2026-09-03 09.24.19/gen-1788398659.png
+./Outputs/2026-09-03 09.26.59
+./Outputs/2026-09-03 09.32.41
+./Outputs/2026-09-03 09.32.41/.DS_Store
+./Outputs/2026-09-03 09.38.50
+./Outputs/2026-09-03 09.38.50/.DS_Store
+./Outputs/2026-09-03 09.39.41
+./Outputs/2026-09-03 09.39.41/recreate-1788399581.txt
+./Outputs/2026-09-03 09.39.55
+./Outputs/2026-09-03 09.40.12
+./Outputs/2026-09-03 09.40.12/gen-1788399612.png
+./Outputs/2026-09-03 09.41.00
+./Outputs/2026-09-03 09.41.00/.DS_Store
+./Outputs/2026-09-03 09.44.01
+./Outputs/2026-09-03 09.44.01/.DS_Store
+./Outputs/2026-09-04 09.55.22
+./Outputs/2026-09-04 09.56.02
+./Outputs/2026-09-04 10.00.16
+./Outputs/2026-09-04 10.01.35
+./Outputs/2026-09-04 10.01.35/recreate-192828c8-8185-4e23-9793-8a2e256d35b3.txt
+./Outputs/2026-09-04 10.03.05
+./Outputs/2026-09-04 10.03.05/recreate-c7796076-af15-4fb5-853c-0c688597adb6.txt
+./Outputs/2026-09-04 10.03.17
+./Outputs/2026-09-04 10.03.17/recreate-15df9725-75af-4485-bddf-66f4312759bd.txt
+./Outputs/2026-09-04 10.04.55
+./Outputs/2026-09-04 10.04.55/recreate-8b9b52a0-4a04-4020-a892-9a3b92b92a60.txt
+./Outputs/2026-09-04 10.09.12
+./Outputs/2026-09-04 10.09.12/recreate-41c40ec6-18cf-4c55-b381-028ede36a2d6.txt
+./Outputs/2026-09-04 10.22.22
+./Outputs/2026-09-04 10.22.22/recreate-9f3b7973-884d-430f-bce1-1a0ff99ea50e.txt
+./Outputs/2026-09-04 10.22.37
+./Outputs/2026-09-04 10.22.37/recreate-be3fc44a-70e9-43f2-81de-7e4019f24561.txt
+./Outputs/2026-09-04 10.23.12
+./Outputs/2026-09-04 10.23.12/recreate-c1375c6b-399c-462b-a2c7-2137c31c6dae.txt
+./Outputs/2026-09-04 10.45.35
+./Outputs/2026-09-04 10.45.35/recreate-90a8f3fd-a2b9-4680-b511-b60391b4d572.txt
+./app
+./app/backend
+./app/backend/mac
+./app/backend/mac/libstable-diffusion.dylib
+./app/backend/mac/sd
+./app/llm-backend
+./app/llm-backend/mac
+./app/llm-backend/mac/arm64
+./app/llm-backend/mac/arm64/llama-server
+./app/llm-backend/mac/lib
+./app/llm-backend/mac/lib/libcrypto.3.dylib
+./app/llm-backend/mac/lib/libggml-base.0.dylib
+./app/llm-backend/mac/lib/libggml.0.dylib
+./app/llm-backend/mac/lib/libllama-common.0.dylib
+./app/llm-backend/mac/lib/libllama-server-impl.dylib
+./app/llm-backend/mac/lib/libllama.0.dylib
+./app/llm-backend/mac/lib/libmtmd.0.dylib
+./app/llm-backend/mac/lib/libssl.3.dylib
+./app/llm-models
+./app/llm-models/Qwen3-4B-Q4_K_M.gguf
+./app/llm-models/Qwen3-8B-Q4_K_M.gguf
+./app/llm-models/Qwen3-TTS-12Hz-1.7B-Base-GGUF
+./app/llm-models/Qwen3-TTS-12Hz-1.7B-Base-GGUF/qwen3-tts-12hz-1.7b-base-bf16.gguf
+./app/models
+./app/models/Realistic_Vision_V5.1_fp16-no-ema.safetensors
+./app/models/sd_turbo.safetensors
+./app/models/sd_xl_turbo_1.0.safetensors
+./app/research-backend
+./app/research-backend/brain.log
+./app/research-backend/memory.log
+./app/research-backend/nexie_brain.py
+./app/research-backend/nexie_memory.py
+./app/research-backend/nexie_research.py
+./app/research-backend/research.log
+./app/research-backend/server.log
+./app/speech-backend
+./app/speech-backend/mac
+./app/speech-backend/mac/cpu
+./app/speech-backend/mac/cpu/whisper-cli
+./app/speech-backend/mac/lib
+./app/speech-backend/mac/lib/libggml-base.0.dylib
+./app/speech-backend/mac/lib/libggml.0.dylib
+./app/speech-backend/mac/lib/libwhisper.1.dylib
+./app/speech-models
+./app/speech-models/ggml-base.bin
+./app/tts-cache
+./app/tts-cache/onnx-community
+./app/tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX
+./app/tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/config.json
+./app/tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/onnx
+./app/tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/onnx/model_quantized.onnx
+./app/tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/tokenizer.json
+./app/tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/tokenizer_config.json
+./app/tts-runtime
+./app/tts-runtime/node_modules
+./app/tts-runtime/package-lock.json
+./app/tts-runtime/package.json
+./app/whisper-models
+./bots.json
+./knowledge.json
+./logs
+./logs/appdelegate.log
+./logs/sd-server.log
+./memory.json
+./presets.json
+./profiles.json
+./scripts
+./scripts/workers
+./scripts/workers/tts-kokoro-worker.mjs
+./tts-cache
+./tts-cache/onnx-community
+./tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX
+./tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/config.json
+./tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/onnx
+./tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/onnx/model_quantized.onnx
+./tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/tokenizer.json
+./tts-cache/onnx-community/Kokoro-82M-v1.0-ONNX/tokenizer_config.json
+
+## PART 3 - Vendored runtime deps (not authored source):
+
+tts-runtime/node_modules: 32 npm packages (onnxruntime-web, kokoro-tauri? , sharp, phonemizer, etc.)
+tts-cache: onnx-community/Kokoro-82M-v1.0-ONNX (model_quantized.onnx, tokenizer)

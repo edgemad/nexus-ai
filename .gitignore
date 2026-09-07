@@ -1,0 +1,21 @@
+# Build artifacts
+dist/
+Tests/build/
+
+# macOS / editors
+.DS_Store
+*.swp
+*.swo
+xcuserdata/
+*.xccheckout
+DerivedData/
+
+# Generated documentation snapshots (regenerable; keep the repo source-only)
+FULL_SOURCE_CODE.txt
+NEXIE_FULL_SOURCE.pdf
+Nexie-PDFs/
+
+# Logs
+*.log
+# Backups
+*.bak

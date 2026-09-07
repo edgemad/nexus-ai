@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B10000000000000000000001 /* NexusAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000001 /* NexusAIApp.swift */; };
+		B10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000002 /* ContentView.swift */; };
+		B10000000000000000000003 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000003 /* ChatView.swift */; };
+		B10000000000000000000004 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000004 /* HealthView.swift */; };
+		B10000000000000000000005 /* FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000005 /* FilesView.swift */; };
+		B10000000000000000000007 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000007 /* CodeView.swift */; };
+		B10000000000000000000008 /* AutomationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000008 /* AutomationsView.swift */; };
+		B1000000000000000000003C /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000003C /* TasksView.swift */; };
+		B10000000000000000000009 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000009 /* ActivityView.swift */; };
+		B1000000000000000000000A /* ApprovalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000A /* ApprovalsView.swift */; };
+		B1000000000000000000000B /* SystemMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000B /* SystemMonitor.swift */; };
+		B1000000000000000000000C /* ActivityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000C /* ActivityStore.swift */; };
+		B1000000000000000000000D /* ApprovalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000D /* ApprovalStore.swift */; };
+		B1000000000000000000000E /* ChatEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000E /* ChatEngine.swift */; };
+		B1000000000000000000000F /* AutomationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000F /* AutomationStore.swift */; };
+		B1000000000000000000003B /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000003B /* TaskStore.swift */; };
+		B10000000000000000000010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000010 /* Assets.xcassets */; };
+
+		B20000000000000000000001 /* ChatSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000001 /* ChatSession.swift */; };
+		B20000000000000000000002 /* WorkspaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000002 /* WorkspaceManager.swift */; };
+		B20000000000000000000003 /* BackendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000003 /* BackendManager.swift */; };
+		B20000000000000000000004 /* LLMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000004 /* LLMService.swift */; };
+		B20000000000000000000005 /* WebSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000005 /* WebSearch.swift */; };
+		B20000000000000000000036 /* ResearchServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000036 /* ResearchServiceClient.swift */; };
+		B20000000000000000000037 /* MemoryServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000037 /* MemoryServiceClient.swift */; };
+		B20000000000000000000038 /* BrainServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000038 /* BrainServiceClient.swift */; };
+		B20000000000000000000039 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000039 /* LocationService.swift */; };
+		B2000000000000000000003A /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000003A /* PersistenceController.swift */; };
+		B2000000000000000000003D /* ShellRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000003D /* ShellRunner.swift */; };
+		B2000000000000000000003E /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000003E /* BackupManager.swift */; };
+		B2000000000000000000003F /* ModelMigrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000003F /* ModelMigrations.swift */; };
+		B20000000000000000000040 /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000040 /* Diagnostics.swift */; };
+		B20000000000000000000041 /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000041 /* UpdateManager.swift */; };
+		B20000000000000000000042 /* CommandAllowlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000042 /* CommandAllowlist.swift */; };
+		B20000000000000000000043 /* SecretRedactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000043 /* SecretRedactor.swift */; };
+		B20000000000000000000044 /* DataTrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000044 /* DataTrim.swift */; };
+		B20000000000000000000045 /* SecretStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000045 /* SecretStore.swift */; };
+		B20000000000000000000046 /* NexusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000046 /* NexusError.swift */; };
+		B20000000000000000000047 /* FastMusicGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000047 /* FastMusicGenerator.swift */; };
+		B20000000000000000000048 /* MusicPackCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000048 /* MusicPackCoordinator.swift */; };
+		B20000000000000000000049 /* MusicStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000049 /* MusicStudioView.swift */; };
+		B20000000000000000000050 /* ReadOnlyTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000050 /* ReadOnlyTools.swift */; };
+		B20000000000000000000051 /* TaskGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000051 /* TaskGraph.swift */; };
+		B20000000000000000000052 /* TaskGraphEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000052 /* TaskGraphEngine.swift */; };
+		B20000000000000000000053 /* TaskGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000053 /* TaskGraphView.swift */; };
+		B20000000000000000000054 /* ResearchEvidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000054 /* ResearchEvidence.swift */; };
+		B20000000000000000000055 /* CapabilityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000055 /* CapabilityRouter.swift */; };
+		B20000000000000000000056 /* SidecarNegotiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000056 /* SidecarNegotiator.swift */; };
+		B20000000000000000000057 /* CapabilitiesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000057 /* CapabilitiesCard.swift */; };
+		B20000000000000000000058 /* ChatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000058 /* ChatCommand.swift */; };
+		B20000000000000000000059 /* Eval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000059 /* Eval.swift */; };
+		B20000000000000000000060 /* EvalRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000060 /* EvalRunner.swift */; };
+		TB000000000000000000000B /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000003E /* BackupManager.swift */; };
+		TB000000000000000000000C /* ModelMigrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000003F /* ModelMigrations.swift */; };
+		TB000000000000000000000D /* Diagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000040 /* Diagnostics.swift */; };
+		TB000000000000000000000E /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000041 /* UpdateManager.swift */; };
+		TB000000000000000000000F /* CommandAllowlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000042 /* CommandAllowlist.swift */; };
+		TB0000000000000000000010 /* SecretRedactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000043 /* SecretRedactor.swift */; };
+		TB0000000000000000000011 /* DataTrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000044 /* DataTrim.swift */; };
+		TB0000000000000000000012 /* SecretStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000045 /* SecretStore.swift */; };
+		TB0000000000000000000013 /* NexusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000046 /* NexusError.swift */; };
+		B20000000000000000000006 /* ChatStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000006 /* ChatStore.swift */; };
+		B20000000000000000000007 /* ModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000007 /* ModelStore.swift */; };
+		B20000000000000000000008 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000008 /* ImageGenerator.swift */; };
+		B20000000000000000000009 /* SpeechEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000009 /* SpeechEngine.swift */; };
+		B2000000000000000000000A /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000A /* ThemeManager.swift */; };
+		B2000000000000000000000B /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000B /* ProfileStore.swift */; };
+		B20000000000000000000020 /* KnowledgeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000020 /* KnowledgeStore.swift */; };
+		B20000000000000000000021 /* KnowledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000021 /* KnowledgeView.swift */; };
+		B20000000000000000000022 /* WorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000022 /* WorkspaceView.swift */; };
+		B2000000000000000000000C /* SessionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000C /* SessionListView.swift */; };
+		B2000000000000000000000D /* ChatWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000D /* ChatWindowView.swift */; };
+		B2000000000000000000000E /* ModelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000E /* ModelsView.swift */; };
+		B2000000000000000000000F /* ImageStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000000F /* ImageStudioView.swift */; };
+		B20000000000000000000010 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000010 /* AudioView.swift */; };
+		B20000000000000000000011 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000011 /* SettingsView.swift */; };
+		B20000000000000000000012 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000012 /* Bot.swift */; };
+		B20000000000000000000013 /* BotStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000013 /* BotStore.swift */; };
+		B20000000000000000000014 /* BotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000014 /* BotsView.swift */; };
+
+		B20000000000000000000015 /* PromptPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000015 /* PromptPreset.swift */; };
+
+		B20000000000000000000016 /* PresetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000016 /* PresetStore.swift */; };
+		B20000000000000000000023 /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000023 /* VideoGenerator.swift */; };
+		B20000000000000000000030 /* MiniMaxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000030 /* MiniMaxService.swift */; };
+		B20000000000000000000031 /* CloudProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000031 /* CloudProviderService.swift */; };
+		B20000000000000000000032 /* CloudTTSEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000032 /* CloudTTSEngine.swift */; };
+		B20000000000000000000033 /* TempMediaCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000033 /* TempMediaCache.swift */; };
+		B20000000000000000000024 /* VideoStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000024 /* VideoStudioView.swift */; };
+		B20000000000000000000025 /* FloatingChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000025 /* FloatingChatView.swift */; };
+		B20000000000000000000026 /* AgentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000026 /* AgentAction.swift */; };
+		B20000000000000000000027 /* AgentExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000027 /* AgentExecutor.swift */; };
+		B20000000000000000000028 /* UpgradeProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000028 /* UpgradeProposal.swift */; };
+		B20000000000000000000029 /* SelfImprovementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000029 /* SelfImprovementService.swift */; };
+		B2000000000000000000002A /* DownloadSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000002A /* DownloadSession.swift */; };
+		B2000000000000000000002B /* AudioMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000002B /* AudioMixer.swift */; };
+		B2000000000000000000002C /* ModelCatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000002C /* ModelCatalogService.swift */; };
+		B2000000000000000000002D /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000002D /* MediaPlayer.swift */; };
+		B2000000000000000000002F /* AudioStudioGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000002F /* AudioStudioGenerator.swift */; };
+		B20000000000000000000034 /* AssistantSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000034 /* AssistantSettings.swift */; };
+		B20000000000000000000035 /* VoiceConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000035 /* VoiceConversationController.swift */; };
+		B2000000000000000000002E /* NexusAIAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000002E /* NexusAIAppDelegate.swift */; };
+
+		TB0000000000000000000001 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000003A /* PersistenceController.swift */; };
+		TB0000000000000000000002 /* AssistantSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000034 /* AssistantSettings.swift */; };
+		TB0000000000000000000003 /* AgentAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000026 /* AgentAction.swift */; };
+		TB0000000000000000000004 /* ApprovalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000D /* ApprovalStore.swift */; };
+		TB0000000000000000000005 /* ActivityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000C /* ActivityStore.swift */; };
+		TB0000000000000000000006 /* AutomationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000F /* AutomationStore.swift */; };
+		TB0000000000000000000007 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000003B /* TaskStore.swift */; };
+		TB0000000000000000000008 /* ShellRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2000000000000000000003D /* ShellRunner.swift */; };
+		TB0000000000000000000009 /* Phase1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FT0000000000000000000001 /* Phase1Tests.swift */; };
+		TB000000000000000000000A /* WorkspaceManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FT0000000000000000000002 /* WorkspaceManagerStub.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F10000000000000000000001 /* NexusAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NexusAIApp.swift; sourceTree = "<group>"; };
+		F2000000000000000000002E /* NexusAIAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NexusAIAppDelegate.swift; sourceTree = "<group>"; };
+		F10000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F10000000000000000000003 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		F10000000000000000000004 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		F10000000000000000000005 /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesView.swift; sourceTree = "<group>"; };
+		F10000000000000000000007 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		F10000000000000000000008 /* AutomationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationsView.swift; sourceTree = "<group>"; };
+		F1000000000000000000003C /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		F10000000000000000000009 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		F1000000000000000000000A /* ApprovalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalsView.swift; sourceTree = "<group>"; };
+		F1000000000000000000000B /* SystemMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitor.swift; sourceTree = "<group>"; };
+		F1000000000000000000000C /* ActivityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStore.swift; sourceTree = "<group>"; };
+		F1000000000000000000000D /* ApprovalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalStore.swift; sourceTree = "<group>"; };
+		F1000000000000000000000E /* ChatEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEngine.swift; sourceTree = "<group>"; };
+		F1000000000000000000000F /* AutomationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationStore.swift; sourceTree = "<group>"; };
+		F1000000000000000000003B /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		F10000000000000000000010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F10000000000000000000011 /* NexusAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NexusAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10000000000000000000012 /* NexusAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NexusAI.entitlements; sourceTree = "<group>"; };
+
+		F20000000000000000000001 /* ChatSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSession.swift; sourceTree = "<group>"; };
+		F20000000000000000000002 /* WorkspaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceManager.swift; sourceTree = "<group>"; };
+		F20000000000000000000003 /* BackendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendManager.swift; sourceTree = "<group>"; };
+		F20000000000000000000004 /* LLMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMService.swift; sourceTree = "<group>"; };
+		F20000000000000000000005 /* WebSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearch.swift; sourceTree = "<group>"; };
+		F20000000000000000000036 /* ResearchServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchServiceClient.swift; sourceTree = "<group>"; };
+		F20000000000000000000037 /* MemoryServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryServiceClient.swift; sourceTree = "<group>"; };
+		F20000000000000000000038 /* BrainServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainServiceClient.swift; sourceTree = "<group>"; };
+		F20000000000000000000039 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		F2000000000000000000003A /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		F2000000000000000000003D /* ShellRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellRunner.swift; sourceTree = "<group>"; };
+		F2000000000000000000003E /* BackupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupManager.swift; sourceTree = "<group>"; };
+		F2000000000000000000003F /* ModelMigrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMigrations.swift; sourceTree = "<group>"; };
+		F20000000000000000000040 /* Diagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostics.swift; sourceTree = "<group>"; };
+		F20000000000000000000041 /* UpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
+		F20000000000000000000042 /* CommandAllowlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandAllowlist.swift; sourceTree = "<group>"; };
+		F20000000000000000000043 /* SecretRedactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretRedactor.swift; sourceTree = "<group>"; };
+		F20000000000000000000044 /* DataTrim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTrim.swift; sourceTree = "<group>"; };
+		F20000000000000000000045 /* SecretStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretStore.swift; sourceTree = "<group>"; };
+		F20000000000000000000046 /* NexusError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NexusError.swift; sourceTree = "<group>"; };
+		F20000000000000000000047 /* FastMusicGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastMusicGenerator.swift; sourceTree = "<group>"; };
+		F20000000000000000000048 /* MusicPackCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPackCoordinator.swift; sourceTree = "<group>"; };
+		F20000000000000000000049 /* MusicStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicStudioView.swift; sourceTree = "<group>"; };
+		F20000000000000000000050 /* ReadOnlyTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadOnlyTools.swift; sourceTree = "<group>"; };
+		F20000000000000000000051 /* TaskGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGraph.swift; sourceTree = "<group>"; };
+		F20000000000000000000052 /* TaskGraphEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGraphEngine.swift; sourceTree = "<group>"; };
+		F20000000000000000000053 /* TaskGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGraphView.swift; sourceTree = "<group>"; };
+		F20000000000000000000054 /* ResearchEvidence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchEvidence.swift; sourceTree = "<group>"; };
+		F20000000000000000000055 /* CapabilityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilityRouter.swift; sourceTree = "<group>"; };
+		F20000000000000000000056 /* SidecarNegotiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidecarNegotiator.swift; sourceTree = "<group>"; };
+		F20000000000000000000057 /* CapabilitiesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilitiesCard.swift; sourceTree = "<group>"; };
+		F20000000000000000000058 /* ChatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCommand.swift; sourceTree = "<group>"; };
+		F20000000000000000000059 /* Eval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eval.swift; sourceTree = "<group>"; };
+		F20000000000000000000060 /* EvalRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvalRunner.swift; sourceTree = "<group>"; };
+		F20000000000000000000006 /* ChatStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatStore.swift; sourceTree = "<group>"; };
+		F20000000000000000000007 /* ModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStore.swift; sourceTree = "<group>"; };
+		F20000000000000000000008 /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		F20000000000000000000009 /* SpeechEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechEngine.swift; sourceTree = "<group>"; };
+		F2000000000000000000000A /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		F2000000000000000000000B /* ProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStore.swift; sourceTree = "<group>"; };
+		F20000000000000000000020 /* KnowledgeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeStore.swift; sourceTree = "<group>"; };
+		F20000000000000000000021 /* KnowledgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeView.swift; sourceTree = "<group>"; };
+		F20000000000000000000022 /* WorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceView.swift; sourceTree = "<group>"; };
+		F2000000000000000000000C /* SessionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListView.swift; sourceTree = "<group>"; };
+		F2000000000000000000000D /* ChatWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWindowView.swift; sourceTree = "<group>"; };
+		F2000000000000000000000E /* ModelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsView.swift; sourceTree = "<group>"; };
+		F2000000000000000000000F /* ImageStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStudioView.swift; sourceTree = "<group>"; };
+		F20000000000000000000010 /* AudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
+		F20000000000000000000011 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F20000000000000000000012 /* Bot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
+		F20000000000000000000013 /* BotStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotStore.swift; sourceTree = "<group>"; };
+		F20000000000000000000014 /* BotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotsView.swift; sourceTree = "<group>"; };
+
+		F20000000000000000000015 /* PromptPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptPreset.swift; sourceTree = "<group>"; };
+
+		F20000000000000000000016 /* PresetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStore.swift; sourceTree = "<group>"; };
+		F20000000000000000000023 /* VideoGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGenerator.swift; sourceTree = "<group>"; };
+		F20000000000000000000030 /* MiniMaxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniMaxService.swift; sourceTree = "<group>"; };
+		F20000000000000000000031 /* CloudProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudProviderService.swift; sourceTree = "<group>"; };
+		F20000000000000000000032 /* CloudTTSEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTTSEngine.swift; sourceTree = "<group>"; };
+		F20000000000000000000033 /* TempMediaCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempMediaCache.swift; sourceTree = "<group>"; };
+		F20000000000000000000024 /* VideoStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStudioView.swift; sourceTree = "<group>"; };
+		F20000000000000000000025 /* FloatingChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingChatView.swift; sourceTree = "<group>"; };
+		F20000000000000000000026 /* AgentAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAction.swift; sourceTree = "<group>"; };
+		F20000000000000000000027 /* AgentExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentExecutor.swift; sourceTree = "<group>"; };
+		F20000000000000000000028 /* UpgradeProposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeProposal.swift; sourceTree = "<group>"; };
+		F20000000000000000000029 /* SelfImprovementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfImprovementService.swift; sourceTree = "<group>"; };
+		F2000000000000000000002A /* DownloadSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSession.swift; sourceTree = "<group>"; };
+		F2000000000000000000002B /* AudioMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixer.swift; sourceTree = "<group>"; };
+		F2000000000000000000002C /* ModelCatalogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCatalogService.swift; sourceTree = "<group>"; };
+		F2000000000000000000002D /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		F2000000000000000000002F /* AudioStudioGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStudioGenerator.swift; sourceTree = "<group>"; };
+		F20000000000000000000034 /* AssistantSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantSettings.swift; sourceTree = "<group>"; };
+		F20000000000000000000035 /* VoiceConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceConversationController.swift; sourceTree = "<group>"; };
+		FT0000000000000000000001 /* Phase1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phase1Tests.swift; sourceTree = "<group>"; };
+		FT0000000000000000000002 /* WorkspaceManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceManagerStub.swift; sourceTree = "<group>"; };
+		FT0000000000000000000003 /* NexusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NexusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DR1000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		TR0000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		GR1000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				GR1000000000000000000002 /* NexusAI */,
+				GR1000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		TGR0000000000000000000001 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FT0000000000000000000001 /* Phase1Tests.swift */,
+				FT0000000000000000000002 /* WorkspaceManagerStub.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		GR1000000000000000000002 /* NexusAI */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000001 /* NexusAIApp.swift */,
+				F2000000000000000000002E /* NexusAIAppDelegate.swift */,
+				F10000000000000000000002 /* ContentView.swift */,
+				F10000000000000000000012 /* NexusAI.entitlements */,
+				GR1000000000000000000004 /* Views */,
+				GR1000000000000000000005 /* Models */,
+				GR1000000000000000000006 /* Services */,
+				F10000000000000000000010 /* Assets.xcassets */,
+				TGR0000000000000000000001 /* Tests */,
+			);
+			path = NexusAI;
+			sourceTree = "<group>";
+		};
+		GR1000000000000000000004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000003 /* ChatView.swift */,
+				F2000000000000000000000C /* SessionListView.swift */,
+				F2000000000000000000000D /* ChatWindowView.swift */,
+				F10000000000000000000004 /* HealthView.swift */,
+				F10000000000000000000005 /* FilesView.swift */,
+				F10000000000000000000007 /* CodeView.swift */,
+				F10000000000000000000008 /* AutomationsView.swift */,
+				F1000000000000000000003C /* TasksView.swift */,
+				F10000000000000000000009 /* ActivityView.swift */,
+				F1000000000000000000000A /* ApprovalsView.swift */,
+				F2000000000000000000000E /* ModelsView.swift */,
+				F2000000000000000000000F /* ImageStudioView.swift */,
+				F20000000000000000000010 /* AudioView.swift */,
+				F20000000000000000000011 /* SettingsView.swift */,
+				F20000000000000000000021 /* KnowledgeView.swift */,
+				F20000000000000000000022 /* WorkspaceView.swift */,
+				F20000000000000000000014 /* BotsView.swift */,
+				F20000000000000000000024 /* VideoStudioView.swift */,
+				F20000000000000000000025 /* FloatingChatView.swift */,
+				F20000000000000000000049 /* MusicStudioView.swift */,
+				F20000000000000000000053 /* TaskGraphView.swift */,
+				F20000000000000000000057 /* CapabilitiesCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GR1000000000000000000005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000000B /* SystemMonitor.swift */,
+				F1000000000000000000000C /* ActivityStore.swift */,
+				F1000000000000000000000D /* ApprovalStore.swift */,
+				F1000000000000000000000F /* AutomationStore.swift */,
+				F1000000000000000000003B /* TaskStore.swift */,
+				F20000000000000000000051 /* TaskGraph.swift */,
+				F20000000000000000000054 /* ResearchEvidence.swift */,
+				F20000000000000000000058 /* ChatCommand.swift */,
+				F20000000000000000000059 /* Eval.swift */,
+				F20000000000000000000001 /* ChatSession.swift */,
+				F20000000000000000000012 /* Bot.swift */,
+				F20000000000000000000015 /* PromptPreset.swift */,
+				F20000000000000000000026 /* AgentAction.swift */,
+				F20000000000000000000028 /* UpgradeProposal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		GR1000000000000000000006 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000000E /* ChatEngine.swift */,
+				F20000000000000000000002 /* WorkspaceManager.swift */,
+				F20000000000000000000003 /* BackendManager.swift */,
+				F20000000000000000000004 /* LLMService.swift */,
+				F20000000000000000000005 /* WebSearch.swift */,
+				F20000000000000000000036 /* ResearchServiceClient.swift */,
+				F20000000000000000000037 /* MemoryServiceClient.swift */,
+				F20000000000000000000038 /* BrainServiceClient.swift */,
+				F20000000000000000000039 /* LocationService.swift */,
+				F2000000000000000000003A /* PersistenceController.swift */,
+				F2000000000000000000003D /* ShellRunner.swift */,
+				F2000000000000000000003E /* BackupManager.swift */,
+				F2000000000000000000003F /* ModelMigrations.swift */,
+				F20000000000000000000040 /* Diagnostics.swift */,
+				F20000000000000000000041 /* UpdateManager.swift */,
+				F20000000000000000000042 /* CommandAllowlist.swift */,
+				F20000000000000000000043 /* SecretRedactor.swift */,
+				F20000000000000000000044 /* DataTrim.swift */,
+				F20000000000000000000045 /* SecretStore.swift */,
+				F20000000000000000000046 /* NexusError.swift */,
+				F20000000000000000000047 /* FastMusicGenerator.swift */,
+				F20000000000000000000048 /* MusicPackCoordinator.swift */,
+				F20000000000000000000050 /* ReadOnlyTools.swift */,
+				F20000000000000000000052 /* TaskGraphEngine.swift */,
+				F20000000000000000000055 /* CapabilityRouter.swift */,
+				F20000000000000000000056 /* SidecarNegotiator.swift */,
+				F20000000000000000000060 /* EvalRunner.swift */,
+				F20000000000000000000006 /* ChatStore.swift */,
+				F20000000000000000000007 /* ModelStore.swift */,
+				F20000000000000000000008 /* ImageGenerator.swift */,
+				F20000000000000000000009 /* SpeechEngine.swift */,
+				F2000000000000000000000A /* ThemeManager.swift */,
+				F2000000000000000000000B /* ProfileStore.swift */,
+				F20000000000000000000020 /* KnowledgeStore.swift */,
+				F20000000000000000000013 /* BotStore.swift */,
+				F20000000000000000000016 /* PresetStore.swift */,
+				F20000000000000000000023 /* VideoGenerator.swift */,
+				F20000000000000000000030 /* MiniMaxService.swift */,
+				F20000000000000000000031 /* CloudProviderService.swift */,
+				F20000000000000000000032 /* CloudTTSEngine.swift */,
+				F20000000000000000000033 /* TempMediaCache.swift */,
+				F20000000000000000000027 /* AgentExecutor.swift */,
+				F20000000000000000000029 /* SelfImprovementService.swift */,
+				F2000000000000000000002A /* DownloadSession.swift */,
+				F2000000000000000000002B /* AudioMixer.swift */,
+				F2000000000000000000002C /* ModelCatalogService.swift */,
+ 				F2000000000000000000002D /* MediaPlayer.swift */,
+ 				F2000000000000000000002F /* AudioStudioGenerator.swift */,
+				F20000000000000000000034 /* AssistantSettings.swift */,
+				F20000000000000000000035 /* VoiceConversationController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		GR1000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000011 /* NexusAI.app */,
+				FT0000000000000000000003 /* NexusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+NT1000000000000000000001 /* NexusAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL1000000000000000000002 /* Build configuration list for PBXNativeTarget "NexusAI" */;
+			buildPhases = (
+				SR1000000000000000000001 /* Sources */,
+				DR1000000000000000000001 /* Frameworks */,
+				RS1000000000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NexusAI;
+			productName = NexusAI;
+			productReference = F10000000000000000000011 /* NexusAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		TT0000000000000000000001 /* NexusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = TK0000000000000000000001 /* Build configuration list for PBXNativeTarget "NexusTests" */;
+			buildPhases = (
+				TS0000000000000000000001 /* Sources */,
+				TR0000000000000000000002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NexusTests;
+			productName = NexusTests;
+			productReference = FT0000000000000000000003 /* NexusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PR1000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					NT1000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					TT0000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = CL1000000000000000000001 /* Build configuration list for PBXProject "NexusAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = GR1000000000000000000001;
+			productRefGroup = GR1000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				NT1000000000000000000001 /* NexusAI */,
+				TT0000000000000000000001 /* NexusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		RS1000000000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000010 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SR1000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000001 /* NexusAIApp.swift in Sources */,
+				B2000000000000000000002E /* NexusAIAppDelegate.swift in Sources */,
+				B10000000000000000000002 /* ContentView.swift in Sources */,
+				B10000000000000000000003 /* ChatView.swift in Sources */,
+				B10000000000000000000004 /* HealthView.swift in Sources */,
+				B10000000000000000000005 /* FilesView.swift in Sources */,
+				B10000000000000000000007 /* CodeView.swift in Sources */,
+				B10000000000000000000008 /* AutomationsView.swift in Sources */,
+				B1000000000000000000003C /* TasksView.swift in Sources */,
+				B10000000000000000000009 /* ActivityView.swift in Sources */,
+				B1000000000000000000000A /* ApprovalsView.swift in Sources */,
+				B1000000000000000000000B /* SystemMonitor.swift in Sources */,
+				B1000000000000000000000C /* ActivityStore.swift in Sources */,
+				B1000000000000000000000D /* ApprovalStore.swift in Sources */,
+				B1000000000000000000000E /* ChatEngine.swift in Sources */,
+				B1000000000000000000000F /* AutomationStore.swift in Sources */,
+				B1000000000000000000003B /* TaskStore.swift in Sources */,
+				B20000000000000000000001 /* ChatSession.swift in Sources */,
+				B20000000000000000000002 /* WorkspaceManager.swift in Sources */,
+				B20000000000000000000003 /* BackendManager.swift in Sources */,
+				B20000000000000000000004 /* LLMService.swift in Sources */,
+				B20000000000000000000005 /* WebSearch.swift in Sources */,
+				B20000000000000000000036 /* ResearchServiceClient.swift in Sources */,
+				B20000000000000000000037 /* MemoryServiceClient.swift in Sources */,
+				B20000000000000000000038 /* BrainServiceClient.swift in Sources */,
+				B20000000000000000000039 /* LocationService.swift in Sources */,
+				B2000000000000000000003A /* PersistenceController.swift in Sources */,
+				B2000000000000000000003D /* ShellRunner.swift in Sources */,
+				B2000000000000000000003E /* BackupManager.swift in Sources */,
+				B2000000000000000000003F /* ModelMigrations.swift in Sources */,
+				B20000000000000000000040 /* Diagnostics.swift in Sources */,
+				B20000000000000000000041 /* UpdateManager.swift in Sources */,
+				B20000000000000000000042 /* CommandAllowlist.swift in Sources */,
+				B20000000000000000000043 /* SecretRedactor.swift in Sources */,
+				B20000000000000000000044 /* DataTrim.swift in Sources */,
+				B20000000000000000000045 /* SecretStore.swift in Sources */,
+				B20000000000000000000046 /* NexusError.swift in Sources */,
+				B20000000000000000000047 /* FastMusicGenerator.swift in Sources */,
+				B20000000000000000000048 /* MusicPackCoordinator.swift in Sources */,
+				B20000000000000000000049 /* MusicStudioView.swift in Sources */,
+				B20000000000000000000050 /* ReadOnlyTools.swift in Sources */,
+				B20000000000000000000051 /* TaskGraph.swift in Sources */,
+				B20000000000000000000052 /* TaskGraphEngine.swift in Sources */,
+				B20000000000000000000053 /* TaskGraphView.swift in Sources */,
+				B20000000000000000000054 /* ResearchEvidence.swift in Sources */,
+				B20000000000000000000055 /* CapabilityRouter.swift in Sources */,
+				B20000000000000000000056 /* SidecarNegotiator.swift in Sources */,
+				B20000000000000000000057 /* CapabilitiesCard.swift in Sources */,
+				B20000000000000000000058 /* ChatCommand.swift in Sources */,
+				B20000000000000000000059 /* Eval.swift in Sources */,
+				B20000000000000000000060 /* EvalRunner.swift in Sources */,
+				B20000000000000000000006 /* ChatStore.swift in Sources */,
+				B20000000000000000000007 /* ModelStore.swift in Sources */,
+				B20000000000000000000008 /* ImageGenerator.swift in Sources */,
+				B20000000000000000000009 /* SpeechEngine.swift in Sources */,
+				B2000000000000000000000A /* ThemeManager.swift in Sources */,
+				B2000000000000000000000B /* ProfileStore.swift in Sources */,
+				B20000000000000000000020 /* KnowledgeStore.swift in Sources */,
+				B20000000000000000000021 /* KnowledgeView.swift in Sources */,
+				B20000000000000000000022 /* WorkspaceView.swift in Sources */,
+				B2000000000000000000000C /* SessionListView.swift in Sources */,
+				B2000000000000000000000D /* ChatWindowView.swift in Sources */,
+				B2000000000000000000000E /* ModelsView.swift in Sources */,
+				B2000000000000000000000F /* ImageStudioView.swift in Sources */,
+				B20000000000000000000010 /* AudioView.swift in Sources */,
+				B20000000000000000000011 /* SettingsView.swift in Sources */,
+				B20000000000000000000012 /* Bot.swift in Sources */,
+				B20000000000000000000013 /* BotStore.swift in Sources */,
+				B20000000000000000000014 /* BotsView.swift in Sources */,
+				B20000000000000000000015 /* PromptPreset.swift in Sources */,
+				B20000000000000000000016 /* PresetStore.swift in Sources */,
+				B20000000000000000000023 /* VideoGenerator.swift in Sources */,
+				B20000000000000000000030 /* MiniMaxService.swift in Sources */,
+				B20000000000000000000031 /* CloudProviderService.swift in Sources */,
+				B20000000000000000000032 /* CloudTTSEngine.swift in Sources */,
+				B20000000000000000000033 /* TempMediaCache.swift in Sources */,
+				B20000000000000000000024 /* VideoStudioView.swift in Sources */,
+				B20000000000000000000025 /* FloatingChatView.swift in Sources */,
+				B20000000000000000000026 /* AgentAction.swift in Sources */,
+				B20000000000000000000028 /* UpgradeProposal.swift in Sources */,
+				B20000000000000000000027 /* AgentExecutor.swift in Sources */,
+				B20000000000000000000029 /* SelfImprovementService.swift in Sources */,
+				B2000000000000000000002A /* DownloadSession.swift in Sources */,
+				B2000000000000000000002B /* AudioMixer.swift in Sources */,
+				B2000000000000000000002C /* ModelCatalogService.swift in Sources */,
+ 				B2000000000000000000002D /* MediaPlayer.swift in Sources */,
+ 				B2000000000000000000002F /* AudioStudioGenerator.swift in Sources */,
+				B20000000000000000000034 /* AssistantSettings.swift in Sources */,
+				B20000000000000000000035 /* VoiceConversationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		TS0000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				TB0000000000000000000001 /* PersistenceController.swift in Sources */,
+				TB0000000000000000000002 /* AssistantSettings.swift in Sources */,
+				TB0000000000000000000003 /* AgentAction.swift in Sources */,
+				TB0000000000000000000004 /* ApprovalStore.swift in Sources */,
+				TB0000000000000000000005 /* ActivityStore.swift in Sources */,
+				TB0000000000000000000006 /* AutomationStore.swift in Sources */,
+				TB0000000000000000000007 /* TaskStore.swift in Sources */,
+				TB0000000000000000000008 /* ShellRunner.swift in Sources */,
+				TB000000000000000000000B /* BackupManager.swift in Sources */,
+				TB000000000000000000000C /* ModelMigrations.swift in Sources */,
+				TB000000000000000000000D /* Diagnostics.swift in Sources */,
+				TB000000000000000000000E /* UpdateManager.swift in Sources */,
+				TB000000000000000000000F /* CommandAllowlist.swift in Sources */,
+				TB0000000000000000000010 /* SecretRedactor.swift in Sources */,
+				TB0000000000000000000011 /* DataTrim.swift in Sources */,
+				TB0000000000000000000012 /* SecretStore.swift in Sources */,
+				TB0000000000000000000013 /* NexusError.swift in Sources */,
+				TB0000000000000000000009 /* Phase1Tests.swift in Sources */,
+				TB000000000000000000000A /* WorkspaceManagerStub.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BC1000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC1000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BC1000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NexusAI/NexusAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Nexie";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Nexie uses the microphone so you can talk to it hands-free.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Nexie uses your location to answer questions like \u201cwhere am I?\u201d.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexie.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BC1000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NexusAI/NexusAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Nexie";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Nexie uses the microphone so you can talk to it hands-free.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Nexie uses your location to answer questions like \u201cwhere am I?\u201d.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexie.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		TC0000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexie.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		TC0000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexie.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CL1000000000000000000001 /* Build configuration list for PBXProject "NexusAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1000000000000000000001 /* Debug */,
+				BC1000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CL1000000000000000000002 /* Build configuration list for PBXNativeTarget "NexusAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1000000000000000000003 /* Debug */,
+				BC1000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		TK0000000000000000000001 /* Build configuration list for PBXNativeTarget "NexusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TC0000000000000000000001 /* Debug */,
+				TC0000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PR1000000000000000000001 /* Project object */;
+}

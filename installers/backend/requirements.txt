@@ -1,0 +1,12 @@
+# Nexus AI portable backend - no third-party dependencies.
+#
+# nexie_research.py / nexie_memory.py / nexie_brain.py use only the Python
+# standard library (http.server, urllib, html.parser). Python 3.9+ required.
+#
+# Optional (used by integrators, not the sidecars):
+#   - none
+#
+# To also use the app's on-device llama backend for synthesis, either run the
+# app locally (default endpoint http://127.0.0.1:8080/v1) or point the
+# sidecars elsewhere:
+#   NEXIE_LLM_BASE=http://127.0.0.1:8080/v1
