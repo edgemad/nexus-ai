@@ -31,11 +31,26 @@ cat <<EOF
     Or point research summary at any OpenAI-compatible endpoint:
         NEXIE_LLM_BASE=https://api.example.com/v1 $HERE/start_backend.py
 
-    Launch at boot (systemd example):
-        # ~/.config/systemd/user/nexie-backend.service
-        [Unit]
-        Description=Nexus AI backend
-        [Service]
-        ExecStart=$HERE/start_backend.py
-        Restart=on-failure
 EOF
+
+# systemd user service (Linux) / launchd hint (macOS)
+if command -v systemctl >/dev/null 2>&1 && [ -f "$HERE/nexusai-backend.service" ]; then
+    UNIT_DIR="$HOME/.config/systemd/user"
+    mkdir -p "$UNIT_DIR"
+    sed "s|__WS__|$WS|g" "$HERE/nexusai-backend.service" > "$UNIT_DIR/nexusai-backend.service"
+    systemctl --user daemon-reload 2>/dev/null || true
+    cat <<EOF
+    Run at login (systemd):
+        systemctl --user enable --now nexusai-backend.service
+        systemctl --user status nexusai-backend.service
+    Unit installed at $UNIT_DIR/nexusai-backend.service
+EOF
+else
+    cat <<EOF
+    Launch at boot (macOS launchd): put this in ~/Library/LaunchAgents/com.nexie.backend.plist
+        <array>
+          <string>/usr/bin/env</string><string>python3</string>
+          <string>$DEST/start_backend.py</string>
+        </array>
+EOF
+fi

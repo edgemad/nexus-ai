@@ -1,0 +1,14 @@
+[Unit]
+Description=Nexus AI portable backend (research/memory/brain)
+After=network.target
+
+[Service]
+Type=simple
+# Change this to your endpoint if the LLM is not the local llama server.
+Environment=NEXIE_LLM_BASE=http://127.0.0.1:8080/v1
+ExecStart=/usr/bin/env python3 __WS__/app/research-backend/start_backend.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
