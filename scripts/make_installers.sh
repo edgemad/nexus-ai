@@ -5,14 +5,27 @@
 #   dist/NexusAI-macOS-universal.zip       (same content, zip)
 #   dist/NexusAI-backend-macOS-Linux-Windows.zip
 #
-# Prereqs: Xcode (with the toolchain set in DEVELOPER_DIR if you use a beta),
-# and the portable sidecars at the workspace path below.
+# Prereqs: Xcode (with the toolchain set in DEVELOPER_DIR if you use a beta).
+# The portable sidecars are vendored in installers/backend/, so the build is
+# fully self-contained.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-export DEVELOPER_DIR="${DEVELOPER_DIR:-/Users/edge/Downloads/Xcode-beta.app/Contents/Developer}"
 
-WS_RESEARCH="${WS_RESEARCH:-$HOME/NexusAI Workspace/app/research-backend}"
+# Resolve a usable Xcode developer dir: env override, then known locations,
+# then xcode-select. Falls back gracefully so the script works across machines.
+pick_developer_dir() {
+    for d in "${DEVELOPER_DIR:-}" \
+        /Volumes/1TBex/DeveloperTools-Xcode/Contents/Developer \
+        /Applications/Xcode.app/Contents/Developer \
+        "$HOME/Downloads/Xcode-beta.app/Contents/Developer"; do
+        [ -n "$d" ] && [ -x "$d/usr/bin/xcrun" -o -d "$d/Platforms" ] && { printf '%s' "$d"; return; }
+    done
+    xcode-select -p 2>/dev/null
+}
+export DEVELOPER_DIR="$(pick_developer_dir)"
+
+BKEND="$ROOT/installers/backend"
 DIST="$ROOT/dist"
 STAGE="$ROOT/dist/.stage"
 ENT="$ROOT/NexusAI/NexusAI.entitlements"
@@ -42,7 +55,7 @@ echo "==> Staging backend (portable sidecars)"
 BACKEND_STAGE="$STAGE/Install NEXUS AI/backend"
 mkdir -p "$BACKEND_STAGE"
 for f in nexie_research.py nexie_memory.py nexie_brain.py; do
-    cp "$WS_RESEARCH/$f" "$BACKEND_STAGE/$f"
+    cp "$BKEND/$f" "$BACKEND_STAGE/$f"
 done
 cp "$ROOT"/installers/backend/*.{sh,ps1,py,txt,md} "$BACKEND_STAGE/" 2>/dev/null || true
 cp "$ENT" "$STAGE/Install NEXUS AI/NexusAI.entitlements"
@@ -59,17 +72,17 @@ echo "==> Creating app zip"
 ( cd "$STAGE/Install NEXUS AI" && zip -qry "$DIST/NexusAI-macOS-universal.zip" NexusAI.app backend install.sh README.txt )
 
 echo "==> Creating cross-OS backend zip"
-( cd "$ROOT/installers/backend" &&
+( cd "$BKEND" &&
   rm -rf "$DIST/.backend" && mkdir -p "$DIST/.backend" &&
-  cp "$WS_RESEARCH/nexie_research.py" "$WS_RESEARCH/nexie_memory.py" "$WS_RESEARCH/nexie_brain.py" "$DIST/.backend/" &&
-  cp install.sh install.ps1 start_backend.py requirements.txt README.md "$DIST/.backend/" &&
+  cp "$BKEND/nexie_research.py" "$BKEND/nexie_memory.py" "$BKEND/nexie_brain.py" "$DIST/.backend/" &&
+  cp "$BKEND/install.sh" "$BKEND/install.ps1" "$BKEND/start_backend.py" "$BKEND/requirements.txt" "$BKEND/README.md" "$DIST/.backend/" &&
   cd "$DIST/.backend" && zip -qry "$DIST/NexusAI-backend-macOS-Linux-Windows.zip" . )
 
 echo "==> Verifying"
 DIST_APP="$DIST/NexusAI.app"
 rm -rf "$DIST_APP"
 ditto "$STAGE/Install NEXUS AI/NexusAI.app" "$DIST_APP"   # keep a plain .app for scripting
-lipo -info "$DIST_APP/Contents/MacOS/NexusAI"
+file "$DIST_APP/Contents/MacOS/NexusAI"
 codesign -dvv "$DIST_APP" 2>&1 | grep -E "Signature|TeamIdentifier" \
     || true
 codesign -d --entitlements - "$DIST_APP" 2>/dev/null | grep -q get-task-allow \

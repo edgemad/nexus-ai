@@ -1,0 +1,148 @@
+name: build
+
+on:
+  push:
+    tags:
+      - 'v*'
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  APP_NAME: NexusAI
+  VERSION: 1.1
+
+jobs:
+  macos:
+    name: macOS (universal app + DMG/ZIP/PKG)
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build arm64 Release
+        run: |
+          xcodebuild -project NexusAI.xcodeproj \
+            -scheme NexusAI -configuration Release \
+            -destination 'generic/platform=macOS' -arch arm64 build \
+            ONLY_ACTIVE_ARCH=NO SYMROOT=$RUNNER_TEMP/build-arm64
+
+      - name: Build x86_64 Release
+        run: |
+          xcodebuild -project NexusAI.xcodeproj \
+            -scheme NexusAI -configuration Release \
+            -destination 'generic/platform=macOS' -arch x86_64 build \
+            ONLY_ACTIVE_ARCH=NO SYMROOT=$RUNNER_TEMP/build-x86_64
+
+      - name: Merge into universal app
+        run: |
+          mkdir -p dist/stage/$APP_NAME.app/Contents/MacOS
+          cp -R $RUNNER_TEMP/build-arm64/Release/$APP_NAME.app/Contents/Info.plist dist/stage/$APP_NAME.app/Contents/
+          cp -R $RUNNER_TEMP/build-arm64/Release/$APP_NAME.app/Contents/Resources dist/stage/$APP_NAME.app/Contents/
+          cp -R $RUNNER_TEMP/build-arm64/Release/$APP_NAME.app/Contents/Frameworks dist/stage/$APP_NAME.app/Contents/ 2>/dev/null || true
+          lipo -create \
+            $RUNNER_TEMP/build-arm64/Release/$APP_NAME.app/Contents/MacOS/$APP_NAME \
+            $RUNNER_TEMP/build-x86_64/Release/$APP_NAME.app/Contents/MacOS/$APP_NAME \
+            -output dist/stage/$APP_NAME.app/Contents/MacOS/$APP_NAME
+
+      - name: Provision backend inside app
+        run: |
+          mkdir -p dist/stage/$APP_NAME.app/Contents/Resources/research-backend
+          cp installers/backend/nexie_*.py dist/stage/$APP_NAME.app/Contents/Resources/research-backend/
+
+      - name: Code-sign ad-hoc (strip debug entitlements)
+        run: |
+          codesign --force --deep --sign - --entitlements NexusAI/NexusAI.entitlements \
+            dist/stage/$APP_NAME.app
+
+      - name: Build DMG + ZIP
+        run: |
+          set -e
+          hdiutil create -volname "$APP_NAME" -srcfolder dist/stage/$APP_NAME.app \
+            -ov -format UDZO dist/$APP_NAME-macOS-universal.dmg
+          (cd dist/stage && zip -qry ../$APP_NAME-macOS-universal.zip $APP_NAME.app)
+
+      - name: Build PKG
+        run: |
+          pkgbuild --root dist/stage/$APP_NAME.app \
+            --identifier com.nexie.app --version $VERSION \
+            --install-location /Applications \
+            dist/$APP_NAME-macOS.pkg
+
+      - name: Upload macOS artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.APP_NAME }}-macos
+          path: dist/*.dmg
+            dist/*.zip
+            dist/*.pkg
+          if-no-files-found: error
+
+  linux:
+    name: Linux (portable backend)
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build portable backend zip
+        run: |
+          set -e
+          mkdir -p dist/backend
+          cp installers/backend/nexie_*.py dist/backend/
+          cp installers/backend/start_backend.py dist/backend/
+          cp installers/backend/install.sh dist/backend/
+          cp installers/backend/requirements.txt dist/backend/
+          cp installers/backend/README.md dist/backend/
+          (cd dist/backend && zip -qry ../$APP_NAME-backend-Linux.zip .)
+
+      - name: Upload Linux artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.APP_NAME }}-linux
+          path: dist/${{ env.APP_NAME }}-backend-Linux.zip
+          if-no-files-found: error
+
+  windows:
+    name: Windows (portable backend)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build portable backend zip
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path dist/backend | Out-Null
+          Copy-Item installers/backend/nexie_research.py, installers/backend/nexie_memory.py, installers/backend/nexie_brain.py dist/backend/
+          Copy-Item installers/backend/start_backend.py, installers/backend/install.ps1 dist/backend/
+          Copy-Item installers/backend/requirements.txt, installers/backend/README.md dist/backend/
+          Compress-Archive -Force -Path dist/backend/* -DestinationPath "dist/$env:APP_NAME-backend-Windows.zip"
+
+      - name: Upload Windows artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.APP_NAME }}-windows
+          path: dist/${{ env.APP_NAME }}-backend-Windows.zip
+          if-no-files-found: error
+
+  release:
+    name: Publish GitHub Release
+    needs: [macos, linux, windows]
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: ${{ env.APP_NAME }}-*
+      - name: Assemble release files
+        run: |
+          mkdir -p release
+          find artifacts -type f \( -name '*.dmg' -o -name '*.zip' -o -name '*.pkg' \) -exec cp {} release/ \;
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/*
+          generate_release_notes: true
