@@ -27,15 +27,15 @@ jobs:
         run: |
           xcodebuild -project NexusAI.xcodeproj \
             -scheme NexusAI -configuration Release \
-            -destination 'generic/platform=macOS' -arch arm64 build \
-            ONLY_ACTIVE_ARCH=NO SYMROOT=$RUNNER_TEMP/build-arm64
+            -destination 'generic/platform=macOS' build \
+            ARCHS=arm64 ONLY_ACTIVE_ARCH=NO SYMROOT=$RUNNER_TEMP/build-arm64
 
       - name: Build x86_64 Release
         run: |
           xcodebuild -project NexusAI.xcodeproj \
             -scheme NexusAI -configuration Release \
-            -destination 'generic/platform=macOS' -arch x86_64 build \
-            ONLY_ACTIVE_ARCH=NO SYMROOT=$RUNNER_TEMP/build-x86_64
+            -destination 'generic/platform=macOS' build \
+            ARCHS=x86_64 ONLY_ACTIVE_ARCH=NO SYMROOT=$RUNNER_TEMP/build-x86_64
 
       - name: Merge into universal app
         run: |
