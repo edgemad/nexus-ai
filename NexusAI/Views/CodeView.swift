@@ -91,20 +91,25 @@ struct CodeView: View {
         let swiftFiles = files.filter { $0.hasSuffix(".swift") }.count
         let swiftLines = totalLines(in: url, extensions: ["swift", "m", "mm", "h", "js", "ts", "tsx", "py", "java", "go", "rs", "c", "cpp", "cs"])
 
-        statLines = [
-            "Project: \(url.lastPathComponent)",
-            "Location: \(url.path)",
-            "Top-level folders: \(dirs.count)",
-            "Top-level files: \(files.count)",
-            "Swift source files: \(swiftFiles)",
-            "Estimated total source lines: \(swiftLines)",
-            "•",
-            "Folders:"
-        ] + dirs.prefix(20).map { "  📁 \($0)" }
-        + (dirs.count > 20 ? ["  … and \(dirs.count - 20) more folders"] : [])
-        + ["•", "Files:"]
-        + files.prefix(30).map { "  📄 \($0)" }
-        + (files.count > 30 ? ["  … and \(files.count - 30) more files"] : [])
+        var lines: [String] = []
+        lines.append("Project: \(url.lastPathComponent)")
+        lines.append("Location: \(url.path)")
+        lines.append("Top-level folders: \(dirs.count)")
+        lines.append("Top-level files: \(files.count)")
+        lines.append("Swift source files: \(swiftFiles)")
+        lines.append("Estimated total source lines: \(swiftLines)")
+        lines.append("•")
+        lines.append("Folders:")
+        lines.append(contentsOf: dirs.prefix(20).map { "  📁 \($0)" })
+        if dirs.count > 20 {
+            lines.append("  … and \(dirs.count - 20) more folders")
+        }
+        lines.append(contentsOf: ["•", "Files:"])
+        lines.append(contentsOf: files.prefix(30).map { "  📄 \($0)" })
+        if files.count > 30 {
+            lines.append("  … and \(files.count - 30) more files")
+        }
+        statLines = lines
     }
 
     private func isDirectory(_ url: URL) -> Bool {
