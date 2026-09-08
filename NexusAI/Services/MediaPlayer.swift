@@ -79,7 +79,7 @@ final class MediaPlayer: ObservableObject {
         error = nil
         timeObserver = p.addPeriodicTimeObserver(forInterval: CMTime(seconds: 0.25, preferredTimescale: 600),
                                                  queue: .main) { [weak self] t in
-            Task { @MainActor in self?.currentTime = t.seconds }
+            Task { @MainActor [weak self] in self?.currentTime = t.seconds }
         }
         Task { @MainActor [weak self] in
             guard let item = p.currentItem else { return }

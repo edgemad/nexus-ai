@@ -349,12 +349,9 @@ private struct SessionTile: View {
     let active: Bool
     let onSelect: (UUID) -> Void
 
-    private var session: ChatSession? {
-        chat.sessions.first { $0.id == sessionID }
-    }
-
     var body: some View {
-        Button {
+        let session = chat.sessions.first { $0.id == sessionID }
+        return Button {
             onSelect(sessionID)
         } label: {
             HStack(spacing: 6) {
@@ -538,7 +535,7 @@ enum AppPanel: Hashable, Identifiable {
 }
 
 extension View {
-    func cardStyle() -> some View {
+    @MainActor func cardStyle() -> some View {
         let opacity = ThemeManager.shared.glassOpacity
         return self
             .padding(22)

@@ -70,7 +70,7 @@ final class BackupManager: ObservableObject {
         observer = observer ?? NotificationCenter.default.addObserver(
             forName: .nexieStoreSaved, object: nil, queue: .main
         ) { [weak self] _ in
-            Task { @MainActor in self?.writesSinceBackup += 1 }
+            Task { @MainActor [weak self] in self?.writesSinceBackup += 1 }
         }
         guard ticker == nil else { return }
 
